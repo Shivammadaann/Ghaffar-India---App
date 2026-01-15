@@ -215,27 +215,6 @@ const Home: React.FC<HomeProps> = ({ onAddToCart }) => {
         </div>
       </section>
 
-      {/* FOOTER SPOTLIGHT */}
-      <section className="px-4 mb-12">
-        <div className="accent-gradient rounded-[3rem] p-1 shadow-2xl">
-          <div className="bg-white/10 dark:bg-slate-900/10 backdrop-blur-3xl rounded-[2.9rem] p-8 md:p-16 relative overflow-hidden">
-            <div className="relative z-10 w-full md:w-3/5 text-white">
-              <span className="text-[10px] text-yellow-400 font-black uppercase tracking-[0.4em] mb-4 block">Ghaffar Original</span>
-              <h3 className="text-4xl md:text-5xl font-black mb-6 leading-tight">3D Print <br/>Art Collection</h3>
-              <p className="text-white/80 text-lg font-medium leading-relaxed mb-10 max-w-md">Revolutionary layers of precision. Each piece is unique, durable, and crafted specifically for the modern collector.</p>
-              <Link to="/products?category=3D Printed" className="bg-white text-black px-10 py-4.5 rounded-[2rem] font-black text-sm inline-flex items-center hover:scale-105 active:scale-95 transition-all shadow-xl">
-                Explore Art <ArrowRight size={18} className="ml-3" />
-              </Link>
-            </div>
-            <img 
-              src="https://images.unsplash.com/photo-1633533400589-93b58619106a?auto=format&fit=crop&q=80&w=600" 
-              className="absolute -right-20 -bottom-20 w-96 h-96 object-contain rotate-12 opacity-30 md:opacity-60 pointer-events-none"
-              alt="3D Art"
-            />
-          </div>
-        </div>
-      </section>
-
       {/* Bottom Padding for Mobile Nav */}
       <div className="h-10 md:hidden" />
     </div>

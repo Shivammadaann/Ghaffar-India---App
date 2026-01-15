@@ -3,10 +3,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ghaffar India - Premium Mobile Cases & Lifestyle Gadgets</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ghaffar India | Premium Mobile Accessories & Lifestyle</title>
+    <meta name="description" content="Shop premium mobile cases, 3D printed art, and lifestyle gadgets at Ghaffar India. High-quality protection meets innovative design.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://cdn.shopify.com/s/files/1/0760/3444/1401/files/Black_icon_500_x_500_No_BG_060e5449-ac59-4999-bc13-01094c92edbf.png?v=1768440378">
     <script>
       tailwind.config = {
         darkMode: 'class',
@@ -15,6 +17,9 @@
             fontFamily: {
               sans: ['Inter', 'sans-serif'],
             },
+            animation: {
+              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            }
           }
         }
       }
@@ -25,6 +30,7 @@
             scroll-behavior: smooth;
             background-color: #f8fafc;
             transition: background-color 0.3s ease;
+            -webkit-tap-highlight-color: transparent;
         }
 
         .dark body {
@@ -32,7 +38,6 @@
             color: #f1f5f9;
         }
         
-        /* Liquid Glass iOS 26 Effect */
         .liquid-glass {
             background: rgba(255, 255, 255, 0.45);
             backdrop-filter: blur(30px) saturate(200%) contrast(100%);
@@ -62,7 +67,6 @@
             scrollbar-width: none;
         }
 
-        /* Animated gradient for accent parts */
         .accent-gradient {
             background: linear-gradient(-45deg, #000000, #434343, #000000, #434343);
             background-size: 400% 400%;
@@ -78,6 +82,13 @@
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
+        }
+
+        ::selection {
+            background: rgba(0, 0, 0, 0.1);
+        }
+        .dark ::selection {
+            background: rgba(255, 255, 255, 0.1);
         }
     </style>
 <script type="importmap">
