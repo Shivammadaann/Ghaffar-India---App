@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { MessageCircle, Phone, Mail, Package, ShieldCheck, Zap, ChevronRight, ExternalLink, MessageSquareText, Search, Truck, CheckCircle2 } from 'lucide-react';
 
 const Support: React.FC = () => {
-  const LOGO_SRC = "https://i.ibb.co/89vLMB2/phone-case-logo.png";
+  const LOGO_SRC = "https://cdn.shopify.com/s/files/1/0760/3444/1401/files/Black_icon_500_x_500_No_BG_060e5449-ac59-4999-bc13-01094c92edbf.png?v=1768440378";
   const [orderId, setOrderId] = useState('');
   const [trackingStatus, setTrackingStatus] = useState<'idle' | 'loading' | 'result'>('idle');
 

@@ -4,10 +4,12 @@ import { HashRouter as Router, Routes, Route, Link as RouterLink } from 'react-r
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import Products from './pages/Products';
+import Categories from './pages/Categories';
 import Cart from './pages/Cart';
 import AIAssistant from './pages/AIAssistant';
 import Support from './pages/Support';
 import Wishlist from './pages/Wishlist';
+import Legal from './pages/Legal';
 import { Product, CartItem } from './types';
 
 const App: React.FC = () => {
@@ -77,11 +79,13 @@ const App: React.FC = () => {
       >
         <Routes>
           <Route path="/" element={<Home onAddToCart={handleAddToCart} />} />
+          <Route path="/categories" element={<Categories />} />
           <Route path="/products" element={<Products onAddToCart={handleAddToCart} onAddToWishlist={handleAddToWishlist} searchQuery={searchQuery} />} />
           <Route path="/ai" element={<AIAssistant />} />
           <Route path="/support" element={<Support />} />
           <Route path="/wishlist" element={<Wishlist wishlist={wishlist} onRemove={removeFromWishlist} onAddToCart={handleAddToCart} />} />
           <Route path="/cart" element={<Cart cart={cart} onUpdateQty={updateQuantity} onRemove={removeFromCart} />} />
+          <Route path="/legal" element={<Legal />} />
           <Route path="/contact" element={
             <div className="max-w-xl mx-auto px-6 py-12">
               <div className="mb-12 text-center">

@@ -31,15 +31,16 @@ const Layout: React.FC<LayoutProps> = ({ children, cartCount, wishlistCount, isD
   };
 
   const menuItems = [
-    { label: "Best Sellers", icon: <Star size={18} />, path: "/" },
+    { label: "Home", icon: <HomeIcon size={18} />, path: "/" },
+    { label: "Shop Categories", icon: <LayoutGrid size={18} />, path: "/categories" },
     { label: "Wishlist", icon: <Heart size={18} />, path: "/wishlist" },
     { label: "Track Order", icon: <Truck size={18} />, path: "/support" },
     { label: "Divider", type: "divider" },
     { label: "CATEGORIES", type: "header" },
-    ...CATEGORIES.map(cat => ({ label: cat.name, icon: <LayoutGrid size={18} />, path: `/products?category=${cat.id}` })),
+    ...CATEGORIES.map(cat => ({ label: cat.name, icon: <ChevronRight size={14} />, path: `/products?category=${cat.name}` })),
     { label: "Divider", type: "divider" },
     { label: "Support Center", icon: <LifeBuoy size={18} />, path: "/support" },
-    { label: "Legal", icon: <ShieldCheck size={18} />, path: "/support" },
+    { label: "Legal Center", icon: <ShieldCheck size={18} />, path: "/legal" },
   ];
 
   return (
@@ -73,7 +74,7 @@ const Layout: React.FC<LayoutProps> = ({ children, cartCount, wishlistCount, isD
                 return <div key={idx} className="h-px bg-slate-100 dark:bg-slate-800 my-4 mx-2" />;
               }
               if (item.type === 'header') {
-                return <p key={idx} className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-[0.2em] px-4 py-2">{item.label}</p>;
+                return <p key={idx} className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-[0.2em] px-4 py-2 mt-2">{item.label}</p>;
               }
               return (
                 <Link
@@ -155,7 +156,7 @@ const Layout: React.FC<LayoutProps> = ({ children, cartCount, wishlistCount, isD
       {/* Desktop Navigation (Left Rail) */}
       <nav className="hidden md:flex fixed left-4 top-4 bottom-4 w-20 flex-col items-center py-8 space-y-10 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-[2.5rem] z-50 shadow-xl">
         <NavIcon to="/" icon={<HomeIcon size={24} />} active={isActive('/')} label="Home" isDarkMode={isDarkMode} />
-        <NavIcon to="/products" icon={<LayoutGrid size={24} />} active={isActive('/products')} label="Shop" isDarkMode={isDarkMode} />
+        <NavIcon to="/categories" icon={<LayoutGrid size={24} />} active={isActive('/categories') || isActive('/products')} label="Shop" isDarkMode={isDarkMode} />
         <div className="relative">
            <Link to="/ai" className={`flex flex-col items-center justify-center w-14 h-14 rounded-2xl shadow-xl transition-all active:scale-90 ${isActive('/ai') ? 'accent-gradient text-white scale-110' : 'bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-300'}`}>
             <Sparkles size={26} strokeWidth={2.5} />
@@ -163,13 +164,13 @@ const Layout: React.FC<LayoutProps> = ({ children, cartCount, wishlistCount, isD
           <span className="text-[10px] font-bold text-slate-400 absolute -bottom-5 left-1/2 -translate-x-1/2">AI</span>
         </div>
         <NavIcon to="/cart" icon={<ShoppingBag size={24} />} active={isActive('/cart')} count={cartCount} label="Cart" isDarkMode={isDarkMode} />
-        <NavIcon to="/contact" icon={<User size={24} />} active={isActive('/contact') || isActive('/support')} label="Account" isDarkMode={isDarkMode} />
+        <NavIcon to="/contact" icon={<User size={24} />} active={isActive('/contact') || isActive('/support') || isActive('/legal')} label="Account" isDarkMode={isDarkMode} />
       </nav>
 
       {/* Mobile Bottom Tab Bar */}
       <nav className="md:hidden fixed bottom-6 left-4 right-4 h-16 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-[2rem] flex items-center justify-between px-6 z-[60] pb-safe shadow-2xl">
         <MobileTab to="/" icon={<HomeIcon size={22} />} active={isActive('/')} />
-        <MobileTab to="/products" icon={<LayoutGrid size={22} />} active={isActive('/products')} />
+        <MobileTab to="/categories" icon={<LayoutGrid size={22} />} active={isActive('/categories') || isActive('/products')} />
         
         <div className="relative -mt-12">
            <Link to="/ai" className={`flex flex-col items-center justify-center w-16 h-16 rounded-3xl shadow-2xl transition-all active:scale-95 ${isActive('/ai') ? 'accent-gradient text-white' : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-100 border border-white/50 dark:border-slate-700'}`}>
@@ -178,7 +179,7 @@ const Layout: React.FC<LayoutProps> = ({ children, cartCount, wishlistCount, isD
         </div>
 
         <MobileTab to="/cart" icon={<ShoppingBag size={22} />} active={isActive('/cart')} count={cartCount} />
-        <MobileTab to="/contact" icon={<User size={22} />} active={isActive('/contact') || isActive('/support')} />
+        <MobileTab to="/contact" icon={<User size={22} />} active={isActive('/contact') || isActive('/support') || isActive('/legal')} />
       </nav>
     </div>
   );
