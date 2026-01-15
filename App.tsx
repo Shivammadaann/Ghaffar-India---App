@@ -10,6 +10,7 @@ import AIAssistant from './pages/AIAssistant';
 import Support from './pages/Support';
 import Wishlist from './pages/Wishlist';
 import Legal from './pages/Legal';
+import Checkout from './pages/Checkout';
 import { Product, CartItem } from './types';
 
 const App: React.FC = () => {
@@ -39,6 +40,8 @@ const App: React.FC = () => {
       return [...current, { ...product, quantity: 1 }];
     });
   };
+
+  const handleClearCart = () => setCart([]);
 
   const handleAddToWishlist = (product: Product) => {
     setWishlist(current => {
@@ -85,6 +88,7 @@ const App: React.FC = () => {
           <Route path="/support" element={<Support />} />
           <Route path="/wishlist" element={<Wishlist wishlist={wishlist} onRemove={removeFromWishlist} onAddToCart={handleAddToCart} />} />
           <Route path="/cart" element={<Cart cart={cart} onUpdateQty={updateQuantity} onRemove={removeFromCart} />} />
+          <Route path="/checkout" element={<Checkout cart={cart} onClearCart={handleClearCart} />} />
           <Route path="/legal" element={<Legal />} />
           <Route path="/contact" element={
             <div className="max-w-xl mx-auto px-6 py-12">
