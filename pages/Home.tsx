@@ -31,7 +31,7 @@ const Home: React.FC<HomeProps> = ({ onAddToCart }) => {
       <section className="px-2 pt-2 pb-6">
         <div className="relative h-[500px] md:h-[650px] rounded-[3rem] overflow-hidden shadow-2xl border border-white/20">
           <img 
-            src="https://images.unsplash.com/photo-1550009158-9ebf69173e03?q=80&w=2101&auto=format&fit=crop" 
+            src="https://cdn.shopify.com/s/files/1/0760/3444/1401/files/Gemini_Generated_Image_4iyrpt4iyrpt4iyr.png?v=1768435315" 
             className="absolute inset-0 w-full h-full object-cover" 
             alt="Ghaffar Workshop" 
           />

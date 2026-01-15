@@ -6,31 +6,31 @@ export const CATEGORIES: Category[] = [
     id: 'cat-1',
     name: 'Our Bestsellers',
     description: 'The crowd favorites. Premium quality tested by thousands.',
-    image: 'https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&q=80&w=800'
+    image: 'https://cdn.shopify.com/s/files/1/0760/3444/1401/files/Gemini_Generated_Image_cc2vylcc2vylcc2v.png?v=1768434661'
   },
   {
     id: 'cat-2',
     name: 'Pocket Lighters',
     description: 'Iconic, refillable, and built for a lifetime.',
-    image: 'https://images.unsplash.com/photo-1594913785162-e678567232f2?auto=format&fit=crop&q=80&w=800'
+    image: 'https://cdn.shopify.com/s/files/1/0760/3444/1401/files/Gemini_Generated_Image_yd5r6cyd5r6cyd5r.png?v=1768432248'
   },
   {
     id: 'cat-3',
     name: 'Samsung Cases & Covers',
     description: 'Military-grade protection for your Galaxy device.',
-    image: 'https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&q=80&w=800'
+    image: 'https://cdn.shopify.com/s/files/1/0760/3444/1401/files/Gemini_Generated_Image_1konly1konly1kon.png?v=1768432504'
   },
   {
     id: 'cat-4',
     name: 'Apple iPhone Cases & Covers',
     description: 'Precision fit for the ultimate iPhone experience.',
-    image: 'https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&q=80&w=800'
+    image: 'https://cdn.shopify.com/s/files/1/0760/3444/1401/files/Gemini_Generated_Image_9ot56w9ot56w9ot5.png?v=1768434373'
   },
   {
     id: 'cat-5',
     name: '3D Printed Products',
     description: 'Cutting-edge innovation in every layer.',
-    image: 'https://images.unsplash.com/photo-1633533400589-93b58619106a?auto=format&fit=crop&q=80&w=800'
+    image: 'https://cdn.shopify.com/s/files/1/0760/3444/1401/files/Gemini_Generated_Image_ztdceztdceztdcez.png?v=1768434564'
   }
 ];
 

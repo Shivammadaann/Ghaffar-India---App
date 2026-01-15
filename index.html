@@ -7,11 +7,29 @@
     <title>Ghaffar India - Premium Mobile Cases & Lifestyle Gadgets</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+          }
+        }
+      }
+    </script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
             scroll-behavior: smooth;
-            background-color: #f0f2f5;
+            background-color: #f8fafc;
+            transition: background-color 0.3s ease;
+        }
+
+        .dark body {
+            background-color: #0f172a;
+            color: #f1f5f9;
         }
         
         /* Liquid Glass iOS 26 Effect */
@@ -21,6 +39,11 @@
             -webkit-backdrop-filter: blur(30px) saturate(200%) contrast(100%);
             border: 1px solid rgba(255, 255, 255, 0.5);
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+        }
+
+        .dark .liquid-glass {
+            background: rgba(30, 41, 59, 0.45);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         .liquid-glass-dark {
@@ -46,6 +69,11 @@
             animation: gradient 15s ease infinite;
         }
 
+        .dark .accent-gradient {
+            background: linear-gradient(-45deg, #1e293b, #334155, #1e293b, #334155);
+            background-size: 400% 400%;
+        }
+
         @keyframes gradient {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
@@ -65,7 +93,7 @@
 }
 </script>
 </head>
-<body class="bg-slate-50 text-slate-900 overflow-x-hidden">
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 overflow-x-hidden">
     <div id="root"></div>
 </body>
 </html>
